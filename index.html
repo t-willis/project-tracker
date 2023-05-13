@@ -24,22 +24,57 @@
       <h2>Current Time & Date:</h2>
       <p class="date"></p>
     </header>
-    <div class="card" style="width: 18rem">
-      <div class="card-header">Featured</div>
-      <ul class="list-group list-group-flush">
-        <li class="list-group-item">An item</li>
-        <li class="list-group-item">A second item</li>
-        <li class="list-group-item">A third item</li>
-      </ul>
-      <button
-        type="button"
-        class="btn btn-primary"
-        data-bs-toggle="modal"
-        data-bs-target="#exampleModal"
-      >
-        Launch demo modal
-      </button>
+    <!-- start of Card -->
+    <div class="container">
+      <div class="row">
+        <div class="card col-4" style="width: 18rem">
+          <div class="card-header">Featured</div>
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">An item</li>
+            <li class="list-group-item">A second item</li>
+            <li class="list-group-item">A third item</li>
+          </ul>
+          <button
+            type="button"
+            class="btn btn-primary"
+            data-bs-toggle="modal"
+            data-bs-target="#exampleModal"
+          >
+            Launch demo modal
+          </button>
+        </div>
+        <div class="col-8">
+          <table class="table">
+            <thead class="bg-primary">
+              <tr>
+                <th scope="col">First</th>
+                <th scope="col">Last</th>
+                <th scope="col">Handle</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>Mark</td>
+                <td>Otto</td>
+                <td>@mdo</td>
+              </tr>
+              <tr>
+                <td>Jacob</td>
+                <td>Thornton</td>
+                <td>@fat</td>
+              </tr>
+              <tr>
+                <td colspan="2">Larry the Bird</td>
+                <td>@twitter</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
     </div>
+
+    <!-- End of card -->
+    <!-- Start of Modal -->
     <div
       class="modal fade"
       id="exampleModal"
@@ -58,7 +93,31 @@
               aria-label="Close"
             ></button>
           </div>
-          <div class="modal-body">...</div>
+          <div class="modal-body">
+            <form>
+              <div class="row mb-3">
+                <label for="projectName" class="col-sm-3 col-form-label"
+                  >Project Name</label
+                >
+                <div class="col-sm-9">
+                  <input type="text" class="form-control" id="projectName" />
+                </div>
+              </div>
+              <div class="row mb-3">
+                <select class="form-select" aria-label="Default select example">
+                  <option selected>Open this select menu</option>
+                  <option value="1">Web Application (Front End)</option>
+                  <option value="2">Web Application (Back End)</option>
+                  <option value="3">Web Application (Full Stack)</option>
+                  <option value="3">Mobile Application</option>
+                </select>
+              </div>
+              <div class="row mb-3">
+                <label for="date">Date</label>
+                <input type="date" id="date" />
+              </div>
+            </form>
+          </div>
           <div class="modal-footer">
             <button
               type="button"
@@ -72,6 +131,7 @@
         </div>
       </div>
     </div>
+    <!-- End of Modal -->
     <script
       src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js"
       integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE"
